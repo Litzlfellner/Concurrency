@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "Python"
+date:   2015-12-30 17:48:42 +0100
+categories: parallel computing python
+---
+
+## Resources
+* [Python GIL][python-gil]
+* [David Beazley, Understanding the Python GIL](https://www.youtube.com/watch?v=Obt-vMVdM8s)
+
+## Global Interpreter Lock (GIL)
+
+## Python threading package
+
+* [Pymotw, threading, Python 2](https://pymotw.com/2/threading/)
+* [Python docs, threading](https://docs.python.org/2/library/threading.html)
+
+The major components fo the threading module are:
+
+* The thread object
+* The Lock object
+* The RLock object
+* The semaphore object
+* The condition object
+* The event object
+
+
+## Thread synchronization
+
+### Lock
+
+{% highlight python %}
+
+import threading
+
+lock = threading.Lock()
+
+def thread_function():
+    lock.acquire()
+    # Do stuff
+    lock.release()
+
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[python-gil]: https://wiki.python.org/moin/GlobalInterpreterLock
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
